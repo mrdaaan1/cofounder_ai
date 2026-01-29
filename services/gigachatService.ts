@@ -47,7 +47,7 @@ export const getMentorResponse = async (
     // Проверяем, доступен ли backend
     if (error instanceof TypeError && error.message.includes('fetch')) {
       return {
-        reply: "❌ Не удалось подключиться к backend серверу на http://localhost:5000\n\nУбедитесь, что:\n1. Backend сервер запущен (python backend/server.py)\n2. Порт 5000 свободен\n3. Установлены все зависимости (pip install -r backend/requirements.txt)"
+        reply: "❌ Не удалось подключиться к backend серверу\n\nУбедитесь, что:\n1. Backend сервер запущен (python backend/server.py)\n2. Backend доступен на http://localhost:5001\n3. Установлены все зависимости (pip install -r backend/requirements.txt)"
       };
     }
 
